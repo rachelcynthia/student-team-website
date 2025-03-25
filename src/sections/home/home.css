@@ -1,0 +1,119 @@
+/* Add a black background color to the top navigation */
+body {
+    margin: 0;
+    background-color: #EEEEEE;
+}
+
+.topnav {
+    background-color: #DBCEC1;
+    overflow: hidden;
+    display: flex;
+    align-content: stretch;
+    justify-content: center;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: #000;
+    text-align: center;
+    padding: 14px 25px;
+    text-decoration: none;
+    font-size: 17px;
+    border-bottom: 5px solid rgba(237, 36, 36, 0.5);
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #e5dcd3;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    border-bottom: 5px solid #ED2424;
+    background-color: #e5dcd3;
+    color: black;
+}
+
+
+.home {
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+}
+
+.images {
+    object-fit: contain;
+    width: 50vw;
+    height: 50vh;
+}
+
+.carousel {
+    padding-left: 2vmin;
+    padding-top: 2vmin;
+    width: 50vw;
+    height: 50vh;
+    aspect-ratio: 16 / 9;
+}
+
+#slideshow {
+    position: relative;
+}
+
+.arrows {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2vmin;
+    color: #fff;
+    cursor: pointer;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+#dots {
+    position: relative;
+    text-align: center;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 2px 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    /* transition: background-color 0.6s ease; */
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+
+#contents {
+    background-color: #800000;
+    margin: 3vw;
+    border-radius: 10%;
+    max-width: 30%;
+    align-content: center;
+    padding: 0 2vw;
+}
+
+.content {
+    font-size: 3vw;
+    text-align: center;
+    color: #fff;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    line-height: 140%;
+    letter-spacing: 20%;
+}
