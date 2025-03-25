@@ -41,20 +41,21 @@ body {
     display: flex;
     flex-direction: row;
     justify-content:center;
+    padding-left: 2vmin;
+    padding-top: 2vmin;
 }
 
 .images {
     object-fit: contain;
     width: 50vw;
-    height: 50vh;
+    height: 60vh;
 }
 
 .carousel {
-    padding-left: 2vmin;
-    padding-top: 2vmin;
     width: 50vw;
     height: 50vh;
     aspect-ratio: 16 / 9;
+    margin-right: 2vw;
 }
 
 #slideshow {
@@ -102,15 +103,15 @@ body {
 
 #contents {
     background-color: #800000;
-    margin: 3vw;
-    border-radius: 10%;
-    max-width: 30%;
     align-content: center;
     padding: 0 2vw;
+    width: 30vw;
+    height: 60vh;
+    border-radius: 3%;
 }
 
 .content {
-    font-size: 3vw;
+    font-size: 5vh;
     text-align: center;
     color: #fff;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
