@@ -15,7 +15,6 @@
     - A body with the content of the page
         - the header of the page
         - the main content of the page
-    - A footer with the link to the javascript file
     - A script tag with the link to the javascript file
 
 
