@@ -1,4 +1,3 @@
-/* Add a black background color to the top navigation */
 body {
     margin: 0;
     background-color: #EEEEEE;
@@ -34,32 +33,4 @@ body {
     border-bottom: 5px solid #ED2424;
     background-color: #e5dcd3;
     color: black;
-}
-
-.sidenav {
-    width: max-content;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    background-color: rgba(219, 206, 193, 0.6);
-    padding: 2vh;
-    padding-bottom: 3vh;
-    margin-right: 2vw;
-}
-
-.sidenav div {
-    text-decoration: none;
-    color: black;
-    border-bottom: 3px solid #800000;
-    font-size: 3vh;
-    padding: 2vh;
-    cursor: pointer;
-}
-
-.about-us {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    margin-top: 10vh;
-    margin-left: 10vh;
 }

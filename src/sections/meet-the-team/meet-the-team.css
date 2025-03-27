@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    background-color: #EEEEEE;
+}
+
+.topnav {
+    background-color: #DBCEC1;
+    overflow: hidden;
+    display: flex;
+    align-content: stretch;
+    justify-content: center;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: #000;
+    text-align: center;
+    padding: 14px 25px;
+    text-decoration: none;
+    font-size: 17px;
+    border-bottom: 5px solid rgba(237, 36, 36, 0.5);
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #e5dcd3;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    border-bottom: 5px solid #ED2424;
+    background-color: #e5dcd3;
+    color: black;
+}
+
+.image-wrapper{
+    border-radius: 50%;
+    width: 10vmin;
+    height: 10vmin;
+}
+
+.profile-img{
+    border-radius: inherit;
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text{
+    text-align: center;
+    height: 4vmin;
+}
+
+.image-wrapper .text{
+    display: none;
+}
+
+.image-wrapper:hover .text{
+    display: block;
+}
+
+#profiles{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.meet-the-team{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2vh;
+}
+
+#information{
+    margin-top: 10vh;
+    padding-top: 2vh;
+    padding-left: 2vw;
+    border-top: 1px solid black;
+    width: 100vw;
+}
+
+.student-info-wrapper {
+    display: flex;
+    width: 70vw;
+    column-gap: 2vw;
+}
+
+.info{
+    display: flex;
+    justify-content: center;
+}

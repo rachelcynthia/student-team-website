@@ -2,24 +2,47 @@
 
 <head>
     <link rel="stylesheet" href="about-us.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
     <!-- Navigation Bar -->
     <div class="topnav">
-        <base href="http://localhost:8000/src/" />
-        <a class="nav" href="sections/home/home.html">Home</a>
-        <a class="nav active" href="sections/about-us/about-us.html">About Us</a>
-        <a class="nav" href="#contact">Meet The Team</a>
-        <a class="nav" href="#about">What we do</a>
-        <a class="nav" href="#about">Blogs</a>
-        <a class="nav" href="#about">Achievements</a>
-        <a class="nav" href="#about">Awards</a>
+        <a class="nav" href="../home/home.html">Home</a>
+        <a class="nav active" href="../about-us/about-us.html">About Us</a>
+        <a class="nav" href="../meet-the-team/meet-the-team.html">Meet The Team</a>
+        <a class="nav" href="../what-we-do/what-we-do.html">What we do</a>
+        <a class="nav" href="../blogs/blogs.html">Blogs</a>
+        <a class="nav" href="../achievements/achievements.html">Achievements</a>
+        <a class="nav" href="../awards/awards.html">Awards</a>
     </div>
 
 
     <!-- About Us Page -->
+
+    <div class="about-us">
+
+        <!-- The side navigation bar -->
+        <div id="mySidenav" class="sidenav">
+            <div onclick="displayContent(0)">Team ETHOS</div>
+            <div onclick="displayContent(1)">Theory of Change</div>
+            <div onclick="displayContent(2)">Team Contact Details</div>
+        </div>
+
+        <!-- Team ETHOS -->
+        <div class="content">
+            Team ETHOS
+        </div>
+
+        <!-- Theory of Change -->
+        <div class="content">
+            Theory of Change
+        </div>
+
+        <!-- Team Contact Details -->
+        <div class="content">
+            Team Contact Details
+        </div>
+    </div>
 
     <!-- This needs to be at the end for the js file to work-->
     <script src="about-us.js" type="text/javascript"></script>

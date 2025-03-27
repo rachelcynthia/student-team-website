@@ -1,6 +1,9 @@
-jQuery(function(){
-    jQuery('.navbar').load('../../navbar/navbar.html');
-});
+displayContent = (index) => {
+    content = document.getElementsByClassName("content");
+    for (i = 0; i < content.length; i++) {
+        content[i].style.display = "none";
+    }
+    content[index].style.display = "block";
+}
 
-navigationLinks = document.getElementsByClassName("nav") // Get all navigation links
-navigationLinks[1].classList.add("active") // Add active for home
+displayContent(0);

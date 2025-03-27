@@ -1,13 +1,5 @@
-// jQuery(function () {
-//     jQuery('.navbar').load('../../navbar/navbar.html');
-//     navigationLinks = document.getElementsByClassName("nav") // Get all navigation links
-//     navigationLinks[0].classList.add("active") // Add active for home
-// });
-
-
-
 // Carousel
-images = ["../../assets/images/1.jpeg", "../../assets/images/2.png", "../../assets/images/3.png"];
+images = ["../../../assets/images/1.jpeg", "../../../assets/images/2.png", "../../../assets/images/3.png"];
 contents = ["Founded in 2014 starting off as a small group of students helping stack books", 
     "Recognised by the University of Manchester with the ITL Teaching Excellence Award (2023)",
     "Recognised across the whole sector with the Collaborative Award for Teaching Excellence (CATE) award"  
@@ -41,11 +33,11 @@ showSlides(slideIndex);
 function plusSlides(n) {
     showSlides(slideIndex += n);
 }
-
 function currentSlide(n) {
     showSlides(slideIndex = n);
 }
 
+// Function to display the current image and information
 function showSlides(n) {
     var i;
     var slides = document.getElementsByClassName("images");
