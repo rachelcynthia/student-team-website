@@ -12,11 +12,11 @@ pictures = ["../../../assets/images/team/only-faces/adrian-kosikowski.jpg",  "..
     "../../../assets/images/team/only-faces/isobel-sibree-dolan.jpg", "../../../assets/images/team/only-faces/kai-prince.jpg", 
     "../../../assets/images/team/only-faces/keira-higgens.jpg", "../../../assets/images/team/only-faces/nicholas-shangkala.jpg", 
     "../../../assets/images/team/only-faces/olivia-shaw.jpg", "../../../assets/images/team/only-faces/preenal-asher.jpg", 
-    "../../../assets/images/team/only-faces/rachel-howe.jpg", "../../../assets/images/team/only-faces/rachel-cox.jpg", 
-    "../../../assets/images/team/only-faces/rachel-cynthia-valavan-vertigo.jpg", "../../../assets/images/team/only-faces/raheel-ansari.jpg",\
+    "../../../assets/images/team/only-faces/rachael-howe.jpg", "../../../assets/images/team/only-faces/rachel-cox.jpg", 
+    "../../../assets/images/team/only-faces/rachel-cynthia-valavan-vetrigo.jpg", "../../../assets/images/team/only-faces/raheel-ansari.jpg",
     "../../../assets/images/team/only-faces/samhita-mukherjee.jpg", "../../../assets/images/team/only-faces/sonia-balan.jpg",
     "../../../assets/images/team/only-faces/syeda-kazmi.jpg", "../../../assets/images/team/only-faces/szaffi-jarbath.jpg",  
-    "../../../assets/images/team/only-faces/tabitha-glennon.jpg"];
+    "../../../assets/images/team/only-faces/tabby-glennon.jpg"];
 // Add all information for the team members
 information = {
     'Adrian Kosikowski': {
@@ -103,7 +103,7 @@ information = {
         'degree': 'PhD Mathematics',
         'description': 'Hello there! I am Kai Prince, an ADHD student doing a part-time PhD in Maths. I did my MMath here at the University of Manchester between 2018-2022 have been involved in student advocacy work since 2021. I have been engaged in a number of roles over the years but I am currently the President of the Disabled Students Society, the Neurodiversity Officer of the Postgraduate Researchers Association, and Co-Chair of the Neurodivergent Staff Network, all whilst moderating multiple Discord servers and working as a Library Student Team Member and DASS Student Support Worker! My main interests are mathematics, neurodiversity and teaching. If I ever have time, I also like to play Dead by Daylight, watch shows or movies, and occasionally play the Piano.'
     },
-    '(degree)Keira Higgens': {
+    '(deg)Keira Higgens': {
         'name': 'Keira Higgens',
         'img': '../../../assets/images/team/keira-higgens.webp',
         'email': 'keira.higgens@student.manchester.ac.uk',
