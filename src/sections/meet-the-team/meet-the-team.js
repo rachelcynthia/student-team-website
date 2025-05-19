@@ -1,8 +1,8 @@
 // List of ST and pictures should be in the same order
-listOfST = ['Adrian Kosikowski', 'Alice Baggott', '()Aram Ameen', '()Ashleigh Glazzard', '()Chloe Burke', '()Dhruv Mistry', '()Divya Malhotra', 'Fariha Agha', 
-    '()Hafsah Chawdry', '()Hailey Smith', '()Isobel Sibree-Dolan', '()Kai Prince', '()Keira Higgens', 'Nicholas Shangkala', '()Olivia Shaw', '()Preenal Asher',
-    '()Rachael Howe', 'Rachel Cox', '()Rachel Cynthia Valavan Vetrigo', 'Raheel Ansari', '()Samhita Mukherjee', '()Sarah-Sonia Balan', '()Syeda Kazmi', 
-    '()Szaffi Jarbath', '()Tabitha Glennon']
+listOfST = ['Adrian Kosikowski', 'Alice Baggott', '(deg)Aram Ameen', 'Ashleigh Glazzard', 'Chloe Burke', 'Dhruv Mistry', 'Divya Malhotra', 'Fariha Agha', 
+    '(deg)Hafsah Chawdry', '(deg)Hailey Smith', '(deg)Isobel Sibree-Dolan', 'Kai Prince', '(deg)Keira Higgens', 'Nicholas Shangkala', '(deg)Olivia Shaw', 'Preenal Asher',
+    '(deg)Rachael Howe', 'Rachel Cox', '()Rachel Cynthia Valavan Vetrigo', 'Raheel Ansari', '(deg)Samhita Mukherjee', '(deg)Sarah-Sonia Balan', '(deg)Syeda Kazmi', 
+    '(deg)Szaffi Jarbath', '(deg)Tabitha Glennon']
 // Add all pictures for the top bar
 pictures = ["../../../assets/images/team/only-faces/adrian-kosikowski.jpg",  "../../../assets/images/team/only-faces/alice-baggott.jpg", 
     "../../../assets/images/team/only-faces/aram-ameen.jpg", "../../../assets/images/team/only-faces/ashleigh-glazzard.jpg", 
@@ -14,7 +14,7 @@ pictures = ["../../../assets/images/team/only-faces/adrian-kosikowski.jpg",  "..
     "../../../assets/images/team/only-faces/olivia-shaw.jpg", "../../../assets/images/team/only-faces/preenal-asher.jpg", 
     "../../../assets/images/team/only-faces/rachel-howe.jpg", "../../../assets/images/team/only-faces/rachel-cox.jpg", 
     "../../../assets/images/team/only-faces/rachel-cynthia-valavan-vertigo.jpg", "../../../assets/images/team/only-faces/raheel-ansari.jpg",\
-    "../../../assets/images/team/only-faces/samhita-mukherjee.jpg", "../../../assets/images/team/only-faces/sarah-sonia-balan.jpg",
+    "../../../assets/images/team/only-faces/samhita-mukherjee.jpg", "../../../assets/images/team/only-faces/sonia-balan.jpg",
     "../../../assets/images/team/only-faces/syeda-kazmi.jpg", "../../../assets/images/team/only-faces/szaffi-jarbath.jpg",  
     "../../../assets/images/team/only-faces/tabitha-glennon.jpg"];
 // Add all information for the team members
@@ -176,7 +176,7 @@ information = {
     '(deg)Syeda Kazmi': {
         'name': 'Syeda Kazmi',
         'img': '../../../assets/images/team/syeda-kazmi.webp',
-        'email': 'fariha.agha@student.manchester.ac.uk',
+        'email': 'syeda.kazmi-3@student.manchester.ac.uk',
         'degree': '-/-',
         'description': 'desc'
     },
