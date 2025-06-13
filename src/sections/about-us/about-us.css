@@ -37,7 +37,7 @@ body {
 }
 
 .sidenav {
-    width: max-content;
+    width: 30vw;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -58,8 +58,22 @@ body {
 
 .about-us {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
     margin-top: 10vh;
     margin-left: 10vh;
+}
+
+.content {
+    width: 70vw;
+}
+
+.toc-list, .toc-list ol {
+  list-style-type: none;
+}
+
+.toc-list {
+  padding: 0;
+}
+
+.toc-list ol {
+  padding-inline-start: 2ch;
 }
