@@ -37,14 +37,15 @@ body {
 }
 
 .sidenav {
-    width: 30vw;
+    width: fit-content;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    /* justify-content: flex-start; */
     background-color: rgba(219, 206, 193, 0.6);
     padding: 2vh;
     padding-bottom: 3vh;
     margin-right: 2vw;
+    height: fit-content
 }
 
 .sidenav div {
@@ -66,14 +67,725 @@ body {
     width: 70vw;
 }
 
-.toc-list, .toc-list ol {
-  list-style-type: none;
+.toc-list,
+.toc-list ol {
+    list-style-type: none;
 }
 
 .toc-list {
-  padding: 0;
+    padding: 0;
 }
 
 .toc-list ol {
-  padding-inline-start: 2ch;
+    padding-inline-start: 2ch;
+}
+
+/* -------------------------------- 
+
+File#: _1_how-it-works-v3
+Title: How It Works v3
+Descr: A list of steps showing how a product works
+Usage: codyhouse.co/license
+
+-------------------------------- */
+/* reset */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+* {
+    font: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    background-color: hsl(0, 0%, 100%);
+    font-family: system-ui, sans-serif;
+    color: hsl(230, 7%, 23%);
+    font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    line-height: 1.2;
+    color: hsl(230, 13%, 9%);
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 2.0736rem;
+}
+
+h2 {
+    font-size: 1.728rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+ol,
+ul,
+menu {
+    list-style: none;
+}
+
+button,
+input,
+textarea,
+select {
+    background-color: transparent;
+    border-radius: 0;
+    color: inherit;
+    line-height: inherit;
+    appearance: none;
+}
+
+textarea {
+    resize: vertical;
+    overflow: auto;
+    vertical-align: top;
+}
+
+a {
+    color: hsl(250, 84%, 54%);
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+img,
+video,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+@media (min-width: 64rem) {
+    body {
+        font-size: 1.25rem;
+    }
+
+    h1 {
+        font-size: 3.051rem;
+    }
+
+    h2 {
+        font-size: 2.44rem;
+    }
+
+    h3 {
+        font-size: 1.75rem;
+    }
+
+    h4 {
+        font-size: 1.5625rem;
+    }
+}
+
+/* variables */
+:root {
+    /* colors */
+    --hj3-color-primary-hsl: 280, 100%, 30%;
+    --hj3-color-contrast-lower-hsl: 240, 4%, 85%;
+    --hj3-color-contrast-medium-hsl: 225, 10%, 40%;
+    --hj3-color-contrast-high-hsl: 230, 7%, 23%;
+    --hj3-color-contrast-higher-hsl: 230, 13%, 9%;
+    --hj3-color-bg-dark-hsl: 240, 4%, 95%;
+    --hj3-color-bg-hsl: 0, 0%, 100%;
+    --hj3-color-accent-hsl: 342, 89%, 48%;
+    --hj3-color-white-hsl: 0, 0%, 100%;
+
+    /* spacing */
+    --hj3-space-xs: 0.5rem;
+    --hj3-space-sm: 0.75rem;
+    --hj3-space-lg: 2rem;
+    --hj3-space-md: 1.25rem;
+
+    /* typography */
+    --hj3-text-sm: 0.833rem;
+}
+
+@media(min-width: 64rem) {
+    :root {
+        /* spacing */
+        --hj3-space-xs: 0.75rem;
+        --hj3-space-sm: 1.125rem;
+        --hj3-space-lg: 3.125rem;
+        --hj3-space-md: 2rem;
+
+        /* typography */
+        --hj3-text-sm: 1rem;
+    }
+}
+
+/* component */
+.hiw-v3 {
+    --hiw-v3-bullet-size: 40px;
+    --hiw-v3-bullet-font-size: 16px;
+    --hiw-v3-bullet-margin-right: var(--hj3-space-sm);
+    --hiw-v3-gap-y: var(--hj3-space-lg);
+    counter-reset: list-items;
+}
+
+.hiw-v3__item {
+    position: relative;
+    counter-increment: list-items;
+}
+
+.hiw-v3__item:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    top: var(--hiw-v3-bullet-size);
+    left: calc(var(--hiw-v3-bullet-size) / 2 - 2px);
+    width: 4px;
+    height: calc(100% - var(--hiw-v3-bullet-size) / 2);
+    background: linear-gradient(to bottom, hsla(var(--hj3-color-bg-dark-hsl), 0) 0%, hsla(var(--hj3-color-bg-dark-hsl), 1) calc(100% - var(--hiw-v3-bullet-size) / 2));
+}
+
+.hiw-v3__item:not(:last-child) {
+    padding-bottom: var(--hiw-v3-gap-y);
+}
+
+.hiw-v3__item:nth-last-child(2)::before {
+    background: linear-gradient(to bottom, hsla(var(--hj3-color-primary-hsl), 0) 0%, hsla(var(--hj3-color-primary-hsl), 1) calc(100% - var(--hiw-v3-bullet-size) / 2));
+}
+
+.hiw-v3__item:nth-last-child(3)::before {
+    background: linear-gradient(to bottom, hsla(var(--hj3-color-primary-hsl), 0) 0%, hsla(var(--hj3-color-primary-hsl), 1) calc(100% - var(--hiw-v3-bullet-size) / 2));
+}
+
+.hiw-v3__title-wrapper {
+    position: relative;
+    margin-bottom: var(--hj3-space-xs);
+}
+
+.hiw-v3__title {
+    padding-left: calc(var(--hiw-v3-bullet-size) + var(--hiw-v3-bullet-margin-right));
+}
+
+.hiw-v3__bullet {
+    position: relative;
+    margin-left: calc(-1 * var(--hiw-v3-bullet-size));
+    left: calc(-1 * var(--hiw-v3-bullet-margin-right));
+}
+
+.hiw-v3__bullet::before {
+    content: "X";
+    display: inline-flex;
+    width: var(--hiw-v3-bullet-size);
+    overflow: hidden;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.hiw-v3__bullet::after {
+    content: counter(list-items);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: var(--hiw-v3-bullet-size);
+    height: var(--hiw-v3-bullet-size);
+    background-color: hsl(var(--hj3-color-bg-dark-hsl));
+    border-radius: 50%;
+    font-size: var(--hiw-v3-bullet-font-size);
+    font-weight: 600;
+}
+
+.hiw-v3__item:last-child .hiw-v3__bullet::after {
+    background-color: hsl(var(--hj3-color-primary-hsl));
+    color: hsl(var(--hj3-color-white-hsl));
+}
+
+.hiw-v3__item:nth-last-child(2) .hiw-v3__bullet::after {
+    background-color: hsl(var(--hj3-color-primary-hsl));
+    color: hsl(var(--hj3-color-white-hsl));
+}
+
+.hiw-v3__content-wrapper {
+    padding-left: calc(var(--hiw-v3-bullet-size) + var(--hiw-v3-bullet-margin-right));
+}
+
+.hiw-v3__content {
+    --hj3-color-o: 1;
+    color: hsla(var(--hj3-color-contrast-medium-hsl), var(--hj3-color-o, 1));
+    line-height: 1.58;
+}
+
+/* -------------------------------- 
+
+File#: _1_feature-v20
+Title: Feature v20
+Descr: A list of features with icons
+Usage: codyhouse.co/license
+This is for Values section of the About Us page
+
+-------------------------------- */
+
+/* reset */
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+* {
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: hsl(0, 0%, 100%);
+  font-family: system-ui, sans-serif;
+  color: hsl(230, 7%, 23%);
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.4;
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.2;
+  color: hsl(230, 13%, 9%);
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2.5rem; /* 40px */
+}
+
+h2 {
+  font-size: 2.125rem; /* 34px */
+}
+
+h3 {
+  font-size: 1.75rem; /* 28px */
+}
+
+h4 {
+  font-size: 1.375rem; /* 22px */
+}
+
+ol, ul, menu {
+  list-style: none;
+}
+
+button, input, textarea, select {
+  background-color: transparent;
+  border-radius: 0;
+  color: inherit;
+  line-height: inherit;
+  -webkit-appearance: none;
+          appearance: none;
+}
+
+textarea {
+  resize: vertical;
+  overflow: auto;
+  vertical-align: top;
+}
+
+a {
+  color: hsl(250, 84%, 54%);
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img, video, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* -------------------------------- 
+
+Icons 
+
+-------------------------------- */
+
+.cd-icon {
+  --size: 1em;
+  font-size: var(--size);
+  height: 1em;
+  width: 1em;
+  display: inline-block;
+  color: inherit;
+  fill: currentColor;
+  line-height: 1;
+  flex-shrink: 0;
+  max-width: initial;
+}
+
+.cd-icon--is-spinning { /* rotate the icon infinitely */
+  animation: cd-icon-spin 1s infinite linear;
+}
+
+@keyframes cd-icon-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.cd-icon use { /* SVG symbols - enable icon color corrections */
+  color: inherit;
+  fill: currentColor;
+}
+
+/* --------------------------------
+
+Component 
+
+-------------------------------- */
+
+.feature-v20 {
+  position: relative;
+  z-index: 1;
+}
+
+.feature-v20__list {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2rem;
+}
+
+.feature-v20__list > * {
+  min-width: 0;
+}
+
+.feature-v20__item {
+  grid-column-end: span 12;
+}
+
+@media (min-width: 48rem) {
+  .feature-v20__item {
+    grid-column-end: span 6;
+  }  
+}
+
+@media (min-width: 64rem) {
+  .feature-v20__item {
+    grid-column-end: span 3;
+  }
+}
+
+.feature-v20__item-title {
+  transition: color 0.3s;
+}
+
+.feature-v20__icon-wrapper {
+  position: relative;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  color: hsl(250, 84%, 54%); /* icon color */
+  transition: color 0.3s;
+}
+.feature-v20__icon-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0 0 0 1px hsla(230, 13%, 9%, 0.05);
+  z-index: 1;
+  transition: transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1), box-shadow 0.3s;
+}
+
+.feature-v20__icon {
+  --size: 24px;
+  z-index: 2;
+}
+
+.feature-v20__paragraph {
+  color: hsl(240, 4%, 65%);
+}
+
+/* -------------------------------- 
+
+Utilities 
+
+-------------------------------- */
+
+.cd-container {
+  width: calc(100% - 3rem);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cd-max-width-sm {
+  max-width: 48rem;
+}
+
+.cd-max-width-adaptive-lg {
+  max-width: 32rem;
+}
+
+@media (min-width: 48rem) {
+  .cd-max-width-adaptive-lg {
+    max-width: 48rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  .cd-max-width-adaptive-lg {
+    max-width: 64rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .cd-max-width-adaptive-lg {
+    max-width: 80rem;
+  }
+}
+
+.cd-padding-y-xl {
+  padding-bottom: 4.5rem;
+}
+
+.cd-margin-bottom-xl {
+  margin-bottom: 4.5rem;
+}
+
+.cd-margin-bottom-2xs {
+  margin-bottom: 0.75rem;
+}
+
+.cd-text-center {
+  text-align: center;
+}
+
+/* -------------------------------- 
+
+File#: _1_card-v14
+Title: Card v14
+Descr: Container of information used as teaser for further content exploration
+Usage: codyhouse.co/license
+This is for the Vision section of the About Us page
+
+-------------------------------- */
+
+/* reset */
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+* {
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: hsl(0, 0%, 100%);
+  font-family: system-ui, sans-serif;
+  color: hsl(230, 7%, 23%);
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.4;
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.2;
+  color: hsl(230, 13%, 9%);
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2.5rem; /* 40px */
+}
+
+h2 {
+  font-size: 2.125rem; /* 34px */
+}
+
+h3 {
+  font-size: 1.75rem; /* 28px */
+}
+
+h4 {
+  font-size: 1.375rem; /* 22px */
+}
+
+ol, ul, menu {
+  list-style: none;
+}
+
+button, input, textarea, select {
+  background-color: transparent;
+  border-radius: 0;
+  color: inherit;
+  line-height: inherit;
+  -webkit-appearance: none;
+          appearance: none;
+}
+
+textarea {
+  resize: vertical;
+  overflow: auto;
+  vertical-align: top;
+}
+
+a {
+  color: hsl(250, 84%, 54%);
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img, video, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* -------------------------------- 
+
+Icons 
+
+-------------------------------- */
+
+.cd-icon {
+  --size: 1em;
+  font-size: var(--size);
+  height: 1em;
+  width: 1em;
+  display: inline-block;
+  color: inherit;
+  fill: currentColor;
+  line-height: 1;
+  flex-shrink: 0;
+  max-width: initial;
+}
+
+.cd-icon use { /* SVG symbols - enable icon color corrections */
+  color: inherit;
+  fill: currentColor;
+}
+
+/* -------------------------------- 
+
+Component 
+
+-------------------------------- */
+
+.card-v14 {
+  display: flex;
+  flex-direction: column;
+
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0 0 0 1px hsla(230, 13%, 9%, 0.05),
+              0 0.3px 0.4px hsla(230, 13%, 9%, 0.02),
+              0 0.9px 1.5px hsla(230, 13%, 9%, 0.045),
+              0 3.5px 6px hsla(230, 13%, 9%, 0.09);
+  border-radius: 0.375em;
+  padding: 1rem;
+
+  color: inherit;
+  text-decoration: none;
+
+  transition: 0.3s;
+  margin-top: 5vh;
+}
+
+.card-v14:hover {
+  box-shadow: 0 0 0 1px hsla(230, 13%, 9%, 0.05),
+              0 0.9px 1.25px hsla(230, 13%, 9%, 0.025),
+              0 3px 5px hsla(230, 13%, 9%, 0.05),
+              0 12px 20px hsla(230, 13%, 9%, 0.09);
+}
+
+.card-v14__icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: hsla(342, 89%, 48%, 0.2);
+}
+
+.card-v14__icon {
+  --size: 24px;
+  color: hsl(342, 89%, 48%);
+}
+
+.card-v14__description,
+.card-v14__link {
+  font-size: 0.9375rem;
+}
+
+.card-v14__description {
+  color: hsl(225, 4%, 47%);
+  line-height: 1.58;
+  margin: 0.75rem 0 1rem;
+}
+
+.card-v14__link {
+  text-align: right;
+  margin-top: auto;
+  color: hsl(250, 84%, 54%);
+}
+
+/* -------------------------------- 
+
+Demo stuff 
+
+-------------------------------- */
+
+.demo-card-v14-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.demo-card-v14-grid > * {
+  min-width: 0;
+}
+
+@media (min-width: 42.5rem) {
+  .demo-card-v14-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 85.5rem) {
+  .demo-card-v14-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
