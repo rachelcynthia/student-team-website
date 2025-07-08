@@ -7,19 +7,116 @@
 
 <body>
     <!-- Navigation Bar -->
-    <div class="topnav">
-        <a class="nav" href="../home/home.html">Home</a>
-        <a class="nav" href="../about-us/about-us.html">About Us</a>
-        <a class="nav" href="../meet-the-team/meet-the-team.html">Meet The Team</a>
-        <a class="nav active" href="../what-we-do/what-we-do.html">Our Work</a>
-        <a class="nav" href="../blogs/blogs.html">Blogs</a>
-        <a class="nav" href="../achievements/achievements.html">Achievements</a>
-
+    <div class="navbar">
+        <a href="../home/home.html">Home</a>
+        <a href="../about-us/about-us.html">About Us</a>
+        <a href="../meet-the-team/meet-the-team.html">Meet The Team</a>
+        <a class="active" href="../what-we-do/what-we-do.html">Our Work</a>
+        <a href="../blogs/blogs.html">Blogs</a>
     </div>
+
+    <div class="background-overlay"></div>
+
     <!-- Our Work page -->
-    <div>Our Work:<br>A lot</div>
-    <br><br>
-    <div>And Our Workn't:<br>Stack books</div>
+    <div class="content">
+
+        <div class="top-card">
+  <div class="top-card-content">
+    <!-- <h2>Welcome to the Digital Exam Toolkit</h2> -->
+    <p> The University of Manchester Library Student Team (UMLST) was founded in 2013, initially to provide roving
+        support around library sites but has grown into a powerful case of student-staff collaboration and pioneering
+        student partnership at a sector-wide level. We provide study support across the 3 Teaching, Learning and
+        Students (TLS) Programmes, ensure students feel welcome when attending TLS workshops/drop-ins, and are leaders
+        in challenging and enhancing Library and University-wide pedagogies, practices and services.</p>
+    <p class="note">Click on the below images to know more.</p>
+  </div>
+</div>
+
+       
+
+        <div class="gallery">
+            <div class="gallery-item" data-title="Support Teaching and Learning"
+                data-description="We are fully committed towards supporting teaching and learning activities that take place in the library and wider university. We create educational content that is accessible and actively reflect on their lived experiences which make their way into the university's central skills support service - My Learning Essentials (MLE). Subsequently, they also support the sister programmes to MLE - My Research Essential (MRE) and Specialist Library Support (SLS). This is the first image.">
+                <img src="../../../assets/images/our-work/1.png" alt="Image 1">
+            </div>
+            <div class="gallery-item" data-title="Champion Student Voice"
+                data-description="We champion student voice and pave ways for student perspectives to be embedded in institutional policies and practices. Our work on the pre-arrival resource, which goes out to all offer-holders, was exemplary and produced in association with the DASS and ResLife teams.">
+                <img src="../../../assets/images/our-work/2.png" alt="Image 2">
+            </div>
+            <div class="gallery-item" data-title="Work with UCIL module 'Digital Society'"
+                data-description="Our influence also extends to the UCIL module 'Digital Society', for which we create podcasts that dip into topics such as virtual reality, simulated spaces, and employability in the digital age. ">
+                <img src="../../../assets/images/our-work/3.png" alt="Image 3">
+            </div>
+            <div class="gallery-item" data-title="Instagram Takeover During Exam Season"
+                data-description="During the exam season, we took over the library's Instagram to share practical study tips, motivation boosters, and effective revision methods tailored to support students during this demanding time. Through a series of engaging videos, we highlighted simple, actionable techniques to help students manage their time and stress levels.">
+                <img src="../../../assets/images/our-work/4.png" alt="Image 4">
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal-overlay" id="modal">
+            <div class="modal-content">
+                <div class="modal-text">
+                    <h2 id="modal-title">Title</h2>
+                    <p id="modal-description">Description</p>
+                </div>
+                <div class="modal-image">
+                    <img id="modal-img" src="" alt="Modal Image">
+                </div>
+            </div>
+            <span class="modal-close" id="modal-close">&times;</span>
+        </div>
+    </div>
+
+    <section class="ft1-position-relative ft1-z-index-1 ft1-padding-y-xl">
+        <div class="ft1-container ft1-max-width-adaptive-lg">
+            <div class="ft1-grid ft1-gap-y-lg ft1-gap-lg@md ft1-items-center">
+                <div class="ft1-col-5@md">
+                    <div class="ft1-text-component">
+                         <h1>Awards</h1>
+                        <p>The continued impact demonstrated by the UMLST over the last decade has culminated in us
+                            being awarded a Collaborative Teaching Excellence Award (CATE) from AdvanceHE, the Teaching
+                            Excellence Award from UoM, and the Inclusive and Accessible Teaching Award from the
+                            Students'Union to name a few.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="ft1-col-7@md">
+
+                    <div
+                        class="tilted-slideshow ft1-position-relative ft1-padding-top-md ft1-width-80% ft1-margin-x-auto ft1-width-70%@sm ft1-padding-top-0@md js-tilted-slideshow">
+                        <p class="ft1-sr-only">Tilted Image Slideshow</p>
+
+                        <ul
+                            class="tilted-slideshow__list ft1-position-relative ft1-perspective-xs js-tilted-slideshow__list">
+                            <li class="tilted-slideshow__item tilted-slideshow__item--top js-tilted-slideshow__item">
+                                <img src="../../../assets/images/our-work/5.png" alt="Image Description">
+                            </li>
+
+                            <li class="tilted-slideshow__item tilted-slideshow__item--middle js-tilted-slideshow__item">
+                                <img src="../../../assets/images/our-work/6.png" alt="Image Description">
+                            </li>
+
+                            <li class="tilted-slideshow__item tilted-slideshow__item--bottom js-tilted-slideshow__item">
+                                <img src="../../../assets/images/our-work/7.png" alt="Image Description">
+                            </li>
+
+                            <!-- <li class="tilted-slideshow__item tilted-slideshow__item--bottom js-tilted-slideshow__item">
+              <img src="../../../assets/images/our-work/8.png" alt="Image Description">
+            </li>
+
+            <li class="tilted-slideshow__item tilted-slideshow__item--bottom js-tilted-slideshow__item">
+              <img src="../../../assets/images/our-work/9.png" alt="Image Description">
+            </li> -->
+                        </ul>
+
+                        <span class="tilted-slideshow__touch-hint" aria-hidden="true">Tap to change image</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- This needs to be at the end for the js file to work-->
     <script src="what-we-do.js" type="text/javascript"></script>

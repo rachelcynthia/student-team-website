@@ -6,14 +6,15 @@
 
 <body>
     <!-- Navigation Bar -->
-    <div class="topnav">
-        <a class="nav" href="../home/home.html">Home</a>
-        <a class="nav active" href="../about-us/about-us.html">About Us</a>
-        <a class="nav" href="../meet-the-team/meet-the-team.html">Meet The Team</a>
-        <a class="nav" href="../what-we-do/what-we-do.html">Our Work</a>
-        <a class="nav" href="../blogs/blogs.html">Blogs</a>
-        <a class="nav" href="../achievements/achievements.html">Achievements</a>
+    <div class="navbar">
+        <a href="../home/home.html">Home</a>
+        <a class="active" href="../about-us/about-us.html">About Us</a>
+        <a href="../meet-the-team/meet-the-team.html">Meet The Team</a>
+        <a href="../what-we-do/what-we-do.html">Our Work</a>
+        <a href="../blogs/blogs.html">Blogs</a>
     </div>
+
+    <div class="background-overlay"></div>
 
 
     <!-- About Us Page -->
@@ -21,371 +22,309 @@
     <div class="about-us">
 
         <!-- The side navigation bar -->
-        <div id="mySidenav" class="sidenav">
-            <div onclick="displayContent(0)">Values and Vision</div>
-            <!-- <div onclick="displayContent(1)">Theory of Change</div> -->
-            <div onclick="displayContent(2)">Our Recruitment Process</div>
-            <div onclick="displayContent(3)">Team Contact Details</div>
+        <div class="sidebar">
+            <div class="sidebar-link" onclick="displayContent(0)">Values and Vision</div>
+            <div class="sidebar-link" onclick="displayContent(1)">Our Recruitment Process</div>
+            <div class="sidebar-link" onclick="displayContent(2)">Team Contact Details</div>
 
         </div>
 
-        <!-- Team ETHOS -->
-        <div class="content">
-            <!-- Team ETHOS <br> This is the team. <br> And we have a lot of <b>ETHOS</b> -->
-            <!--Values of vision from codyhouse-->
-            <section class="feature-v20 cd-padding-y-xl">
-                <div class="cd-container cd-max-width-sm cd-margin-bottom-xl">
-                    <h1 class="cd-text-center">Values</h1>
+        <!-- Values and Vision -->
+        <div class="content values-vision">
+            <div class="toggle-buttons">
+                <button class="cj1-btn" onclick="toggleContent('values')">Values</button>
+                <button class="cj1-btn" onclick="toggleContent('vision')">Vision</button>
+            </div>
+
+            <!-- Placeholder Image -->
+            <img id="placeholder" class="placeholder-image" src="../../../assets/images/1.jpeg" alt="Placeholder">
+
+            <!-- Values Section -->
+            <div id="values-section" class="cj1-hide">
+                <section class="values-section">
+                    <div class="cd-container cd-max-width-lg">
+                        <h2 class="section-heading">Our Values</h2>
+                        <div class="values-grid">
+                            <div class="value-card">
+                                <h4>Student-Centred</h4>
+                                <p>We prioritise student needs and voices, enhancing their learning experience.</p>
+                            </div>
+                            <div class="value-card">
+                                <h4>Collaboration</h4>
+                                <p>We work across teams to drive positive change in teaching and learning.</p>
+                            </div>
+                            <div class="value-card">
+                                <h4>Inclusivity</h4>
+                                <p>We prioritise accessibility and inclusivity for all students.</p>
+                            </div>
+                            <div class="value-card">
+                                <h4>Belonging</h4>
+                                <p>We create a supportive, welcoming environment where students feel empowered.</p>
+                            </div>
+                            <div class="value-card">
+                                <h4>Development</h4>
+                                <p>We offer growth opportunities that prepare students for their careers.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Vision Section -->
+            <div id="vision-section" class="cj1-hide">
+                <section class="ft1-position-relative ft1-z-index-1 ft1-padding-y-xl">
+                    <div class="ft1-container ft1-max-width-adaptive-lg">
+                        <div class="ft1-grid ft1-gap-y-lg ft1-gap-lg@md ft1-items-center">
+                            <div class="ft1-col-5@md">
+                                <div class="ft1-text-component">
+                                    <!-- <p class="ft1-text-sm ft1-color-contrast-medium">How it works</p> -->
+                                    <h1>Our Vision</h1>
+                                    <p> We aim to create an inclusive environment where students actively contribute to shaping
+                        teaching and learning at the University of Manchester. Through innovation, collaboration,
+                        and a commitment to excellence, we strive to make a meaningful impact.</p>
+                                </div>
+
+                                <!-- <div class="ft1-margin-top-sm">
+                                    <div class="ft1-flex ft1-flex-wrap ft1-gap-sm ft1-items-center">
+                                        <a href="#0" class="ft1-btn ft1-btn--primary">Download</a>
+                                        <a href="#0" class="ft1-color-inherit">Learn more</a>
+                                    </div>
+                                </div> -->
+                            </div>
+
+                            <div class="ft1-col-7@md">
+
+                                <div
+                                    class="tilted-slideshow ft1-position-relative ft1-padding-top-md ft1-width-80% ft1-margin-x-auto ft1-width-70%@sm ft1-padding-top-0@md js-tilted-slideshow">
+                                    <p class="ft1-sr-only">Tilted Image Slideshow</p>
+
+                                    <ul
+                                        class="tilted-slideshow__list ft1-position-relative ft1-perspective-xs js-tilted-slideshow__list">
+                                        <li
+                                            class="tilted-slideshow__item tilted-slideshow__item--top js-tilted-slideshow__item">
+                                            <img src="../../../assets/images/vision/1.jpg" alt="Image Description">
+                                        </li>
+
+                                        <li
+                                            class="tilted-slideshow__item tilted-slideshow__item--middle js-tilted-slideshow__item">
+                                            <img src="../../../assets/images/vision/3.jpg" alt="Image Description">
+                                        </li>
+
+                                        <li
+                                            class="tilted-slideshow__item tilted-slideshow__item--bottom js-tilted-slideshow__item">
+                                            <img src="../../../assets/images/vision/4.jpg" alt="Image Description">
+                                        </li>
+                                    </ul>
+
+                                    <span class="tilted-slideshow__touch-hint" aria-hidden="true">Tap to change
+                                        image</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- Our Recruitment Process -->
+    <div class="content recruitment">
+        <!-- How it works section from Codyhouse -->
+        <ol class="hiw-v3">
+            <li class="hiw-v3__item">
+                <div class="hiw-v3__title-wrapper">
+                    <h4 class="hiw-v3__title">
+                        <span class="hiw-v3__bullet" aria-hidden="true"></span>Advertisement
+                    </h4>
                 </div>
 
-                <div class="cd-container cd-max-width-adaptive-lg">
-                    <ul class="feature-v20__list">
-                        <li class="feature-v20__item">
-                            <figure class="feature-v20__icon-wrapper">
-                                <svg class="feature-v20__icon cd-icon" viewBox="0 0 24 24" aria-hidden="true">
-                                    <g fill="currentColor">
-                                        <path
-                                            d="M21 10H3c-1.103 0-2-.897-2-2V5c0-1.103.897-2 2-2h18c1.103 0 2 .897 2 2v3c0 1.103-.897 2-2 2z">
-                                        </path>
-                                        <rect x="1" y="12" width="6" height="9" rx="2" ry="2" opacity=".4"></rect>
-                                        <rect x="9" y="12" width="14" height="9" rx="2" ry="2" opacity=".4"></rect>
-                                    </g>
-                                </svg>
-                            </figure>
-
-                            <div class="cd-text-center">
-                                <h4 class="cd-margin-bottom-2xs">Student-Centred</h4>
-                                <p class="feature-v20__paragraph">We prioritise student needs and voices, ensuring our
-                                    work enhances their learning experience.</p>
-                            </div>
-                        </li>
-
-                        <li class="feature-v20__item">
-                            <figure class="feature-v20__icon-wrapper">
-                                <svg class="feature-v20__icon cd-icon" viewBox="0 0 24 24" aria-hidden="true">
-                                    <title>Galleries</title>
-                                    <g fill="currentColor">
-                                        <path
-                                            d="M9 9H4c-1.103 0-2-.897-2-2V4c0-1.103.897-2 2-2h5c1.103 0 2 .897 2 2v3c0 1.103-.897 2-2 2z">
-                                        </path>
-                                        <rect x="2" y="11" width="9" height="11" rx="2" ry="2" opacity=".4"></rect>
-                                        <path
-                                            d="M20 22h-5c-1.103 0-2-.897-2-2v-3c0-1.103.897-2 2-2h5c1.103 0 2 .897 2 2v3c0 1.103-.897 2-2 2z">
-                                        </path>
-                                        <rect x="13" y="2" width="9" height="11" rx="2" ry="2"
-                                            transform="rotate(180 17.5 7.5)" opacity=".4"></rect>
-                                    </g>
-                                </svg>
-                            </figure>
-
-                            <div class="cd-text-center">
-                                <h4 class="cd-margin-bottom-2xs">Collaboration </h4>
-                                <p class="feature-v20__paragraph">We work together across teams, departments, and
-                                    institutions to drive positive change in teaching and learning. </p>
-                            </div>
-                        </li>
-
-                        <li class="feature-v20__item">
-                            <figure class="feature-v20__icon-wrapper">
-                                <svg class="feature-v20__icon cd-icon" viewBox="0 0 24 24" aria-hidden="true">
-                                    <title>Animations</title>
-                                    <g fill="currentColor">
-                                        <circle cx="19" cy="9" r="5"></circle>
-                                        <path d="M1 3.059A23.925 23.925 0 0 1 8 20c0-3.416 1.557-6.468 4-8.486"
-                                            fill="none" opacity=".4" stroke="currentColor" stroke-linecap="round"
-                                            stroke-linejoin="round" stroke-width="2"></path>
-                                    </g>
-                                </svg>
-                            </figure>
-
-                            <div class="cd-text-center">
-                                <h4 class="cd-margin-bottom-2xs">Inclusivity</h4>
-                                <p class="feature-v20__paragraph">We prioritise accessibility and inclusivity, ensuring
-                                    that our work benefits all students, regardless of their needs. </p>
-                            </div>
-                        </li>
-
-                        <li class="feature-v20__item">
-                            <figure class="feature-v20__icon-wrapper">
-                                <svg class="feature-v20__icon cd-icon" viewBox="0 0 24 24" aria-hidden="true">
-                                    <title>UI Controls</title>
-                                    <g fill="currentColor">
-                                        <path
-                                            d="M17.5 11h-11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2h11C19.981 2 22 4.019 22 6.5S19.981 11 17.5 11z"
-                                            opacity=".4"></path>
-                                        <circle cx="6.5" cy="6.5" r="4.5"></circle>
-                                        <path
-                                            d="M6.5 13h11c2.481 0 4.5 2.019 4.5 4.5S19.981 22 17.5 22h-11C4.019 22 2 19.981 2 17.5S4.019 13 6.5 13z"
-                                            opacity=".4"></path>
-                                        <circle cx="17.5" cy="17.5" r="4.5"></circle>
-                                    </g>
-                                </svg>
-                            </figure>
-
-                            <div class="cd-text-center">
-                                <h4 class="cd-margin-bottom-2xs">Belonging</h4>
-                                <p class="feature-v20__paragraph">We foster a supportive and welcoming environment where
-                                    every student feels valued and empowered. </p>
-                            </div>
-                        </li>
-
-                        <li class="feature-v20__item">
-                            <figure class="feature-v20__icon-wrapper">
-                                <svg class="feature-v20__icon cd-icon" viewBox="0 0 24 24" aria-hidden="true">
-                                    <title>UI Controls</title>
-                                    <g fill="currentColor">
-                                        <path
-                                            d="M17.5 11h-11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2h11C19.981 2 22 4.019 22 6.5S19.981 11 17.5 11z"
-                                            opacity=".4"></path>
-                                        <circle cx="6.5" cy="6.5" r="4.5"></circle>
-                                        <path
-                                            d="M6.5 13h11c2.481 0 4.5 2.019 4.5 4.5S19.981 22 17.5 22h-11C4.019 22 2 19.981 2 17.5S4.019 13 6.5 13z"
-                                            opacity=".4"></path>
-                                        <circle cx="17.5" cy="17.5" r="4.5"></circle>
-                                    </g>
-                                </svg>
-                            </figure>
-
-                            <div class="cd-text-center">
-                                <h4 class="cd-margin-bottom-2xs">Development</h4>
-                                <p class="feature-v20__paragraph">We provide opportunities for growth, equipping
-                                    students with skills and experiences that prepare them for future careers. </p>
-                            </div>
-                        </li>
-
-                    </ul>
-
-                    <!--Values from codyhouse-->
-
-                    <a class="card-v14" href="#0">
-                        <figure class="card-v14__icon-wrapper" aria-hidden="true">
-                            <svg class="card-v14__icon cd-icon" viewBox="0 0 24 24">
-                                <rect x="1" y="1" width="10" height="10" rx="2"></rect>
-                                <path
-                                    d="M23.428,4.618,19.381.572h0a1.957,1.957,0,0,0-2.762,0L12.572,4.618a1.959,1.959,0,0,0,0,2.764l4.047,4.047a1.957,1.957,0,0,0,2.762,0l4.047-4.046A1.959,1.959,0,0,0,23.428,4.618Z"
-                                    opacity="0.5"></path>
-                                <rect x="13" y="13" width="10" height="10" rx="2"></rect>
-                                <rect x="1" y="13" width="10" height="10" rx="2"></rect>
-                            </svg>
-                        </figure>
-
-                        <h4>Vision </h4>
-
-                        <p class="card-v14__description">We aim to create an inclusive environment where students
-                            actively contribute to shaping teaching and learning at the University of Manchester.
-                            Through innovation, collaboration, and a commitment to excellence, we strive to make a
-                            meaningful impact by supporting students, staff, and the wider university community. Our
-                            vision is to foster a culture of student-led contributions that enhance the university
-                            experience for all. </p>
-                    </a>
+                <div class="hiw-v3__content-wrapper">
+                    <p class="hiw-v3__content">Positions for the Library Student Team will be advertised on
+                        CareerConnect for roughly 2-3 weeks at a
+                        time, we will also post alerts on our social media - make sure to keep your CareerConnect
+                        notifications
+                        on and follow our Instagram @UoMLibrary to keep an eye out for openings! </p>
+                    <br />
+                    <p class="hiw-v3__content">
+                        The advert will include general information about the team, Our Work, and logistics such
+                        as
+                        pay rate
+                        and hours, as well as how to apply. It will also include key contact details for support,
+                        advice
+                        for
+                        completing application forms and preparing for group interviews, and information regarding
+                        our
+                        status as
+                        an equal opportunities employer.</p>
                 </div>
-            </section>
-        </div>
+            </li>
 
-        <!-- Theory of Change -->
-        <div class="content">
-            Theory of Change
-        </div>
+            <li class="hiw-v3__item">
+                <div class="hiw-v3__title-wrapper">
+                    <h4 class="hiw-v3__title">
+                        <span class="hiw-v3__bullet" aria-hidden="true"></span>Application
+                    </h4>
+                </div>
 
+                <div class="hiw-v3__content-wrapper">
+                    <p class="hiw-v3__content"> You will be asked to complete our application form before the
+                        advertised
+                        deadline. This will typically
+                        include answering 3-5 questions with 150 word or less answers aimed at evidencing your
+                        skills
+                        and
+                        experience relevant to the role. Whilst the questions are subject to change between each
+                        round,
+                        they
+                        will usually look at skills such as collaboration, time management, customer service, and
+                        digital capabilities. These applications are then compiled and reviewed against our listed
+                        requirements.
+                    </p>
+                    <br />
+                    <p class="hiw-v3__content">
+                        In the event you are unsuccessful, all applicants will be notified with general guidance on
+                        improving your written application for next time but unfortunately, due to the volume of
+                        applications, we
+                        cannot provided personalised feedback at this stage.
+                    </p>
+                    <br />
+                    <p class="hiw-v3__content">
+                        In the event you are successful, you will receive an invite to interview via email. This
+                        will
+                        include
+                        key information about how the interview will run, photos of the location, advice and
+                        suggested
+                        reading
+                        around our team and Our Work.
+                    </p>
+                </div>
+            </li>
 
-        <!-- Our Recruitment Process -->
-        <div class="content">
-            <!-- How it works section from Codyhouse -->
-            <ol class="hiw-v3">
-                <li class="hiw-v3__item">
-                    <div class="hiw-v3__title-wrapper">
-                        <h4 class="hiw-v3__title">
-                            <span class="hiw-v3__bullet" aria-hidden="true"></span>Advertisement
-                        </h4>
-                    </div>
+            <li class="hiw-v3__item">
+                <div class="hiw-v3__title-wrapper">
+                    <h4 class="hiw-v3__title">
+                        <span class="hiw-v3__bullet" aria-hidden="true"></span>Group Interview
+                    </h4>
+                </div>
 
-                    <div class="hiw-v3__content-wrapper">
-                        <p class="hiw-v3__content">Positions for the Library Student Team will be advertised on
-                            CareerConnect for roughly 2-3 weeks at a
-                            time, we will also post alerts on our social media - make sure to keep your CareerConnect
-                            notifications
-                            on and follow our Instagram @UoMLibrary to keep an eye out for openings! </p>
+                <div class="hiw-v3__content-wrapper">
+                    <p class="hiw-v3__content">We like to think our interview stage is not your standard interview -
+                        we
+                        understand the term 'Group
+                        Interview' can be intimidating at first! Please refer to your invite to interview for
+                        specific
+                        information, as this is also subject to change between recruitment rounds.
+                    </p>
+                    <br />
+                    <p class="hiw-v3__content">
+                        The room will be set up for group activities, facilitated by a member of the Library Team
+                        and at
+                        least
+                        two current Student Team Members. These activities are an opportunity for us to get to know
+                        you,
+                        you to
+                        get to know us, and to showcase your collaborative skills and your passions - there are no
+                        wrong
+                        answers. This is where you decide if we are the right fit for you, as much as we decide if
+                        you
+                        are the
+                        right fit for the team. Again, the activities may be subject to change between rounds,
+                        however
+                        they have
+                        historically included:
+                    </p>
+                    <p class="hiw-v3__content" style="padding: 2vw;">
+                        1. A 1-to-1 Q&A-style activity for us to provide an overview of the role, discuss your own
+                        interests, and
+                        for you to ask questions and learn about current ST member's experiences.
                         <br />
-                        <p class="hiw-v3__content">
-                            The advert will include general information about the team, Our Work, and logistics such
-                            as
-                            pay rate
-                            and hours, as well as how to apply. It will also include key contact details for support,
-                            advice
-                            for
-                            completing application forms and preparing for group interviews, and information regarding
-                            our
-                            status as
-                            an equal opportunities employer.</p>
-                    </div>
-                </li>
-
-                <li class="hiw-v3__item">
-                    <div class="hiw-v3__title-wrapper">
-                        <h4 class="hiw-v3__title">
-                            <span class="hiw-v3__bullet" aria-hidden="true"></span>Application
-                        </h4>
-                    </div>
-
-                    <div class="hiw-v3__content-wrapper">
-                        <p class="hiw-v3__content"> You will be asked to complete our application form before the
-                            advertised
-                            deadline. This will typically
-                            include answering 3-5 questions with 150 word or less answers aimed at evidencing your
-                            skills
-                            and
-                            experience relevant to the role. Whilst the questions are subject to change between each
-                            round,
-                            they
-                            will usually look at skills such as collaboration, time management, customer service, and
-                            digital capabilities. These applications are then compiled and reviewed against our listed
-                            requirements.
-                        </p>
+                        2. A Peer to Peer Support activity with an example enquiry we may get from a student to
+                        showcase your
+                        interpersonal and problem-solving skills.
                         <br />
-                        <p class="hiw-v3__content">
-                            In the event you are unsuccessful, all applicants will be notified with general guidance on
-                            improving your written application for next time but unfortunately, due to the volume of
-                            applications, we
-                            cannot provided personalised feedback at this stage.
-                        </p>
-                        <br />
-                        <p class="hiw-v3__content">
-                            In the event you are successful, you will receive an invite to interview via email. This
-                            will
-                            include
-                            key information about how the interview will run, photos of the location, advice and
-                            suggested
-                            reading
-                            around our team and Our Work.
-                        </p>
-                    </div>
-                </li>
-
-                <li class="hiw-v3__item">
-                    <div class="hiw-v3__title-wrapper">
-                        <h4 class="hiw-v3__title">
-                            <span class="hiw-v3__bullet" aria-hidden="true"></span>Group Interview
-                        </h4>
-                    </div>
-
-                    <div class="hiw-v3__content-wrapper">
-                        <p class="hiw-v3__content">We like to think our interview stage is not your standard interview -
-                            we
-                            understand the term 'Group
-                            Interview' can be intimidating at first! Please refer to your invite to interview for
-                            specific
-                            information, as this is also subject to change between recruitment rounds.
-                        </p>
-                        <br />
-                        <p class="hiw-v3__content">
-                            The room will be set up for group activities, facilitated by a member of the Library Team
-                            and at
-                            least
-                            two current Student Team Members. These activities are an opportunity for us to get to know
-                            you,
-                            you to
-                            get to know us, and to showcase your collaborative skills and your passions - there are no
-                            wrong
-                            answers. This is where you decide if we are the right fit for you, as much as we decide if
-                            you
-                            are the
-                            right fit for the team. Again, the activities may be subject to change between rounds,
-                            however
-                            they have
-                            historically included:
-                        </p>
-                        <p class="hiw-v3__content" style="padding: 2vw;">
-                            1. A 1-to-1 Q&A-style activity for us to provide an overview of the role, discuss your own
-                            interests, and
-                            for you to ask questions and learn about current ST member's experiences.
-                            <br />
-                            2. A Peer to Peer Support activity with an example enquiry we may get from a student to
-                            showcase your
-                            interpersonal and problem-solving skills.
-                            <br />
-                            3. A Student Voice activity with an example scenario aimed at gathering student perspectives
-                            and
-                            representing different experiences, especially underrepresented groups.
-                        </p>
-                        <p class="hiw-v3__content">
-                            In the event you are unsuccessful, you will be notified with direct feedback - it is a
-                            competitive
-                            process, and we understand it can be stressful waiting around, so we aim to do this ASAP.
-                        </p>
-                        <br />
-                        <p class="hiw-v3__content">
-                            In the event you are successful, congratulations! You will be notified with all relevant
-                            information
-                            and, if you choose to accept the offer, you are now a member of the Library Student Team!
-                        </p>
-                    </div>
-                </li>
+                        3. A Student Voice activity with an example scenario aimed at gathering student perspectives
+                        and
+                        representing different experiences, especially underrepresented groups.
+                    </p>
+                    <p class="hiw-v3__content">
+                        In the event you are unsuccessful, you will be notified with direct feedback - it is a
+                        competitive
+                        process, and we understand it can be stressful waiting around, so we aim to do this ASAP.
+                    </p>
+                    <br />
+                    <p class="hiw-v3__content">
+                        In the event you are successful, congratulations! You will be notified with all relevant
+                        information
+                        and, if you choose to accept the offer, you are now a member of the Library Student Team!
+                    </p>
+                </div>
+            </li>
 
 
-                <li class="hiw-v3__item">
-                    <div class="hiw-v3__title-wrapper">
-                        <h4 class="hiw-v3__title">
-                            <span class="hiw-v3__bullet" aria-hidden="true"></span>Induction
-                        </h4>
-                    </div>
+            <li class="hiw-v3__item">
+                <div class="hiw-v3__title-wrapper">
+                    <h4 class="hiw-v3__title">
+                        <span class="hiw-v3__bullet" aria-hidden="true"></span>Induction
+                    </h4>
+                </div>
 
-                    <div class="hiw-v3__content-wrapper">
-                        <p class="hiw-v3__content">Once you have accepted your offer, you will be invited to book your
-                            first
-                            shift which will be a general
-                            induction session. You will be introduced to the relevant Teaching, Learning and Students
-                            Staff,
-                            as well
-                            as the current TLS Interns and any ST members also on shift. You will receive our Handbook
-                            and
-                            Code of
-                            Conduct to explain expectations of the role, as well as familiarised with the digital
-                            systems we
-                            use for
-                            communications and organisation. We provide essential training such as fire safety, GDPR,
-                            and
-                            widening
-                            participation. We also recommend shadowing other ST members on their daily tasks, especially
-                            running our
-                            academic skills workshops both online and on-campus.</p>
-                    </div>
-                </li>
+                <div class="hiw-v3__content-wrapper">
+                    <p class="hiw-v3__content">Once you have accepted your offer, you will be invited to book your
+                        first
+                        shift which will be a general
+                        induction session. You will be introduced to the relevant Teaching, Learning and Students
+                        Staff,
+                        as well
+                        as the current TLS Interns and any ST members also on shift. You will receive our Handbook
+                        and
+                        Code of
+                        Conduct to explain expectations of the role, as well as familiarised with the digital
+                        systems we
+                        use for
+                        communications and organisation. We provide essential training such as fire safety, GDPR,
+                        and
+                        widening
+                        participation. We also recommend shadowing other ST members on their daily tasks, especially
+                        running our
+                        academic skills workshops both online and on-campus.</p>
+                </div>
+            </li>
 
-                <li class="hiw-v3__item">
-                    <div class="hiw-v3__title-wrapper">
-                        <h4 class="hiw-v3__title">
-                            <span class="hiw-v3__bullet" aria-hidden="true"></span>Reflection and Feedback
-                        </h4>
-                    </div>
+            <li class="hiw-v3__item">
+                <div class="hiw-v3__title-wrapper">
+                    <h4 class="hiw-v3__title">
+                        <span class="hiw-v3__bullet" aria-hidden="true"></span>Reflection and Feedback
+                    </h4>
+                </div>
 
-                    <div class="hiw-v3__content-wrapper">
-                        <p class="hiw-v3__content">Student voice and experience are the backbone of the Library Student
-                            Team, so it is important to us that
-                            ST members have the opportunity to get involved with and develop the recruitment process for
-                            future
-                            applicants. You will be asked to provide your own reflection and feedback on how you found
-                            the
-                            recruitment process so we can continue to improve going forward, we encourage you to be as
-                            open
-                            and
-                            honest as possible. We always value student feedback and this is a value we carry throughout
-                            your entire
-                            time with us on the Library Student Team.</p>
-                    </div>
-                </li>
-            </ol>
-        </div>
+                <div class="hiw-v3__content-wrapper">
+                    <p class="hiw-v3__content">Student voice and experience are the backbone of the Library Student
+                        Team, so it is important to us that
+                        ST members have the opportunity to get involved with and develop the recruitment process for
+                        future
+                        applicants. You will be asked to provide your own reflection and feedback on how you found
+                        the
+                        recruitment process so we can continue to improve going forward, we encourage you to be as
+                        open
+                        and
+                        honest as possible. We always value student feedback and this is a value we carry throughout
+                        your entire
+                        time with us on the Library Student Team.</p>
+                </div>
+            </li>
+        </ol>
+    </div>
 
-        <!-- Team Contact Details -->
-        <div class="content">
-            <b>Team Contact Details</b> <br><br> Jennie Blake: jennie.blake@manchester.ac.uk<br><br> Adam Cooke:
-            adam.cooke@manchester.ac.uk<br><br> Verity Richardson: verity.richardson@manchester.ac.uk<br><br>Pranav
-            Bharadwaj Gangrekalve Manoj: pranavbharadwaj.gangrekalvemanoj@manchester.ac.uk<br><br> Eloise Anderson:
-            eloise.anderson@manchester.ac.uk
-        </div>
+    <!-- Team Contact Details -->
+    <div class="content contact">
+        <h2>Team Contact Details</h2> <br><br> Jennie Blake: jennie.blake@manchester.ac.uk<br><br> Adam Cooke:
+        adam.cooke@manchester.ac.uk<br><br> Verity Richardson: verity.richardson@manchester.ac.uk<br><br>Pranav
+        Bharadwaj Gangrekalve Manoj: pranavbharadwaj.gangrekalvemanoj@manchester.ac.uk<br><br> Eloise Anderson:
+        eloise.anderson@manchester.ac.uk
+    </div>
 
-        <!-- This needs to be at the end for the js file to work-->
-        <script src="about-us.js" type="text/javascript"></script>
+    <!-- This needs to be at the end for the js file to work-->
+    <script src="about-us.js" type="text/javascript"></script>
 
 </body>
 
